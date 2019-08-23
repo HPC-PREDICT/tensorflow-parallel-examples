@@ -14,4 +14,4 @@ module load TensorFlow/1.12.0-CrayGNU-18.08-cuda-9.1-python3
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
-srun python $(realpath $(dirname $0))/mnist-model-parallel.py
+srun python mnist-model-parallel.py
