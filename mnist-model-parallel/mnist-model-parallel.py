@@ -144,7 +144,7 @@ if task_idx == 0:
 
     # Start training
     with tf.Session(server.target,config=tf.ConfigProto(log_device_placement=True)) as sess:  # <----- IMPORTANT: Pass the server target to the session definition
-        train_writer = tf.summary.FileWriter(os.path.join(os.environ['SCRATCH'], 'tensorflow', 'logs', 'train', sess.graph))
+        train_writer = tf.summary.FileWriter(os.path.join('logs', 'train'), sess.graph)
 
         # Run the initializer
         sess.run(init)
